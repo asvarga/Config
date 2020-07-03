@@ -25,6 +25,6 @@ feh --bg-scale /usr/share/backgrounds/ryan-stone-skykomish-river.jpg
 
 xmobar &
 
-# xmodmap ~/.xmodmap
+xmodmap ~/.xmodmap
 
 exec xmonad
