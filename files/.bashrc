@@ -117,3 +117,22 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+###
+
+# aliases
+alias sbash='source ~/.bashrc'
+
+alias gits='git status'
+alias gitp='git push'
+alias gitpl='git pull'
+alias gitca='git commit -a -m'
+alias gita='git add .'
+
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias cd....='cd ../../..'
+alias cd.....='cd ../../../..'
+
+alias apti='sudo apt-get install'
+alias apts='apt-cache search'

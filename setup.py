@@ -12,10 +12,14 @@ def run(cmd):
 
 ####
 
+rootdir = "files"
+
+print()
+os.system(f'tree -a {rootdir}')
+
 print("Symlinking Config Files...")
 print()
 
-rootdir = "files"
 for subdir, dirs, files in os.walk(rootdir):
     for file in files:
         filepath = subdir + os.sep + file
