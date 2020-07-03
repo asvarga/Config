@@ -1,0 +1,12 @@
+clear control
+clear mod4
+
+keycode 37 = Super_L
+keycode 105 = Super_R
+keycode 133 = Control_L
+keycode 134 = Control_R 
+
+add control = Control_L
+add control = Control_R
+add mod4 = Super_L
+add mod4 = Super_R

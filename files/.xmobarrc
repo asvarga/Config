@@ -1,0 +1,36 @@
+Config { font = "xft:Ubuntu Mono-12",
+       , additionalFonts = []
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "grey"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run Cpu [] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+					, Run Battery [
+					"-t", "<acstatus>: <left>% - <timeleft>",
+	    			"--",
+					"-O", "AC",
+					"-o", "Bat",
+					"-h", "green",
+					"-l", "red"
+					] 10
+					-- , Run Com "/home/tarshish/.xmobar/getvolume.sh" [] "volume" 2
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%cpu% | %memory% | }\
+                    \{ %date% | %battery%"
+                    --  %volume% |
+       }

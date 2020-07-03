@@ -1,0 +1,6 @@
+configuration {                                              
+    modi: "window,drun,ssh,combi";                              
+    theme: "solarized_alternate";                              
+    font: "Ubuntu Monospace 30";                              
+    combi-modi: "window,drun,ssh";                            
+} 
