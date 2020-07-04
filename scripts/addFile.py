@@ -8,7 +8,7 @@ import sys
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def run(cmd):
-    print(f'SETUP : {cmd}')
+    print(f'ADDFILE : {cmd}')
     os.system(cmd)
 
 ####
