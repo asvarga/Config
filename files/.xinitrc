@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #load xft and urxvt 
-xrdb -merge ~/.Xresources
+# xrdb -merge ~/.Xresources
 
 #speed up touchpad
 #do not think this working

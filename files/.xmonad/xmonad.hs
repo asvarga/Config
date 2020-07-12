@@ -6,6 +6,9 @@ import XMonad.Hooks.DynamicLog (xmobar)
 import XMonad.Hooks.ManageDocks
 import qualified XMonad.StackSet as W
 import Text.Read
+-- import XMonad.Actions.MouseGestures
+
+--------
 
 -- Removes window borders if they aren't needed
 import XMonad.Layout.NoBorders (smartBorders)
@@ -19,14 +22,14 @@ import XMonad.Layout.Spacing
 --                        (Border 5 5 5 5) -- Size of window gaps
 --                        True             -- Enable window gaps
 
-myTerminal = "urxvt"
+myTerminal = "gnome-terminal" -- "terminator" -- "guake" -- "urxvt"
 myMod = mod1Mask  -- 1|->altL, 3|->altR, 4|->cmdL
 
 myBorderWidth = 4
 -- myNormalBorderColor = "#000000"
 -- myFocusedBorderColor = "#551a8b"
 myNormalBorderColor = "#551a8b"
-myFocusedBorderColor = "#966dbd"
+myFocusedBorderColor = "#FFFFFF" -- "#966dbd"
 
 -- run commands at startup:
 -- myStartupHook = spawn "compton --backend glx --vsync opengl"

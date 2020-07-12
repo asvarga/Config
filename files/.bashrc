@@ -142,6 +142,9 @@ alias pp="popd"
 
 alias py='python3'
 
+# path stuff
+export PATH="/home/avarga/scripts:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/avarga/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

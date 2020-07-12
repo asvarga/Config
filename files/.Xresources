@@ -4,16 +4,25 @@ Xft.dpi: 192
 urxvt.termName: rxvt-unicode-256color
 urxvt.scrollBar: false
 !! Font prefferenes
-urxvt.font: xft:Ubuntu Mono:pixelsize=40
-urxvt.boldFont: xft:Ubuntu Mono:pixelsize=40:weight=bold
+urxvt.font: xft:Ubuntu Mono:pixelsize=32
+urxvt.boldFont: xft:Ubuntu Mono:pixelsize=32:weight=bold
 !!urxvt.letterSpace: -1
 urxvt.saveLines: 1000000
 
+! URxvt.perl-ext-common: selection-to-clipboard
+! URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+! URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.iso14755: False
+
 ! !! Perl extensions
-! urxvt.perl-ext-common: default,matcher,font-size
-! !!URxvt.clipboard.autocopy: true
-! !!URxvt.keysym.M-c: perl:clipboard:copy
-! !!URxvt.keysym.M-v: perl:clipboard:paste
+! urxvt.perl-ext-common: default,matcher,font-size,clipboard,keyboard-select
+! URxvt.keyboard-select.clipboard: true
+! URxvt.clipboard.autocopy: true
+! ! URxvt.keysym.M-c: perl:clipboard:copy
+! ! URxvt.keysym.M-v: perl:clipboard:paste
+! URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! !! Open urls in browser with Control-Click
 ! urxvt.urlLauncher: /usr/bin/brave-browser
 ! urxvt.matcher.button: C1
@@ -25,13 +34,15 @@ urxvt.saveLines: 1000000
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-s: perl:keyboard-select:search
-URxvt.keysym.M-u: perl:url-select:select_next
-!URxvt.urlLauncher: firefox
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+! URxvt.keysym.M-c: perl:clipboard:copy
+! URxvt.keysym.M-v: perl:clipboard:paste
+! URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+! URxvt.keysym.M-Escape: perl:keyboard-select:activate
+! URxvt.keysym.M-s: perl:keyboard-select:search
+! URxvt.keysym.M-u: perl:url-select:select_next
+! !URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
 
@@ -69,3 +80,34 @@ URxvt*color14:            #63e9e9
 URxvt*color7:             #d3d7cf
 URxvt*color15:            #eeeeec
 
+
+
+! !! Colorschemes
+! ! special
+! *.foreground: #93a1a1
+! *.background: #141c21
+! *.cursorColor: #afbfbf
+! ! black
+! *.color0: #263640
+! *.color8: #4a697d
+! ! red
+! *.color1: #d12f2c
+! *.color9: #fa3935
+! ! green
+! *.color2: #819400
+! *.color10: #a4bd00
+! ! yellow
+! *.color3: #b08500
+! *.color11: #d9a400
+! ! blue
+! *.color4: #2587cc
+! *.color12: #2ca2f5
+! ! magenta
+! *.color5: #696ebf
+! *.color13: #8086e8
+! ! cyan
+! *.color6: #289c93
+! *.color14: #33c5ba
+! ! white
+! *.color7: #bfbaac
+! *.color15: #fdf6e3

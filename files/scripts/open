@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+import os
+import sys
+import pathlib
+
+####
+
+# command format strings
+dir_cmd = "nautilus {} &"       # for directories
+cmds = {                        # maps file extensions |-> format strings
+    ".ps"   : "evince {} &",
+    ".txt"  : "code {}"
+}
+default_cmd = "code {}"         # when no file extension matches
+
+####
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+def run(cmd):
+    print(f'OPEN : {cmd}')
+    os.system(cmd)
+
+####
+
+filename = sys.argv[1] if len(sys.argv) > 1 else "."
+path = pathlib.Path(filename)
+
+if path.is_dir():  
+    run(dir_cmd.format(filename))
+elif path.is_file():  
+    ext = path.suffix
+    cmd = cmds.get(ext, default_cmd)
+    run(cmd.format(filename))
+else:  
+    raise("It is a special file (socket, FIFO, device file)" )
+    
