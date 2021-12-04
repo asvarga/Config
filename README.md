@@ -7,6 +7,7 @@
 ### Scripts
 
 - `./scripts/setup.py foo`: automate the symlinking
+    - foo ∈ {mac, ubuntu}
 - `./scripts/addFile.py foo blah...`: copy `~/blah...` to `./foo/blah...`
 
 ### TODO
