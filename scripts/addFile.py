@@ -13,7 +13,9 @@ def run(cmd):
 
 ####
 
-for arg in sys.argv[1:]:
+root = sys.argv[1]
+
+for arg in sys.argv[2:]:
     # FIXME: make directories as necessary, like in setup.py
-    cmd_cp = f'cp ~/{arg} ./files/{arg}'
+    cmd_cp = f'cp ~/{arg} ./{root}/{arg}'
     run(cmd_cp)

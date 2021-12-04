@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import os
+import sys
 
 ####
 
@@ -12,15 +13,15 @@ def run(cmd):
 
 ####
 
-rootdir = "files"
+root = sys.argv[1]
 
 print()
-os.system(f'tree -a {rootdir}')
+os.system(f'tree -a {root}')
 
 print("Symlinking Config Files...")
 print()
 
-for subdir, dirs, files in os.walk(rootdir):
+for subdir, dirs, files in os.walk(root):
     for file in files:
         filepath = subdir + os.sep + file
 

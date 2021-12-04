@@ -1,12 +1,12 @@
 # Config
 
-- These are my config files for Ubuntu with Xmonad
-- Symlink to every `./files/blah...` from `~/blah...`
-- Run `./setup.py` (from this directory) to automate this process
+- Collections of config files for different environments + installation scripts
+- Symlink to every `./foo/blah...` from `~/blah...`
 
 ### Scripts
 
-- `./scripts/addFile.py blah...` will copy `~/blah...` to `./files/blah...`
+- `./scripts/setup.py foo`: automate the symlinking
+- `./scripts/addFile.py foo blah...`: copy `~/blah...` to `./foo/blah...`
 
 ### TODO
 
